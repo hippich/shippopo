@@ -1,0 +1,53 @@
+<div id="batchesList">
+</div>
+
+<div class="row">
+  {{#batch}}
+  <style class="batch">
+    @media screen {
+      .batch-{{id}} .page {
+        width: {{sizex}}mm;
+        height: {{sizey}}mm;
+      }
+
+      .batch-{{id}} .page .slots {
+        margin: {{margintop}}mm {{marginright}}mm {{marginbottom}}mm {{marginleft}}mm;
+      }
+    }
+
+    @media print {
+        @page {
+          size: {{sizex}}mm {{sizey}};
+          margin: {{margintop}}mm {{marginright}}mm {{marginbottom}}mm {{marginleft}}mm;
+        }
+    }
+  </style>
+
+  <div id="currentBatch" class="batch-{{id}}">
+    {{#pages}}
+      <div class="page page-{{id}}">
+        <div class="slots">
+          {{#slots}}
+            <style>
+              .slot-{{id}} {
+                position: absolute;
+                width: {{width}}mm;
+                height: {{height}}mm;
+                top: {{top}}mm;
+                left: {{left}}mm;
+              }
+            </style>
+            <div class="slot slot-{{id}}">
+            </div>
+          {{/slots}}
+        </div>
+      </div>
+    {{/pages}}
+  </div>
+
+  <div id="batchControls">
+    {{{batchControls}}}
+  </div>
+  {{/batch}}
+</div>
+

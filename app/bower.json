@@ -1,0 +1,34 @@
+{
+  "name": "todomvc-backbone_marionette_require",
+  "version": "0.0.0",
+  "dependencies": {
+    "requirejs": "~2.1.6",
+    "underscore": "~1.4.4",
+    "backbone.localStorage": "~1.1.16",
+    "bootstrap": "~3.2.0",
+    "requirejs-tpl": "*",
+    "lodash": "~2.4.1",
+    "backbone-relational": "https://github.com/hippich/Backbone-relational.git#49ab7ee3ef1b30a3ea476420aeea5c8242db650b",
+    "requirejs-plugins": "~1.0.3",
+    "requirejs-text": "~2.0.13",
+    "backbone.marionette": "~2.3.1",
+    "backbone.modelmorph": "~1.0.1",
+    "backbone-forms": "https://github.com/hippich/backbone-forms.git#~0.12.0",
+    "backbone.bootstrap-modal": "~0.9.0",
+    "backbone.collectionsubset": "https://github.com/hippich/backbone.collectionsubset.git#~0.1.3",
+    "Backbone.dualStorage": "~1.3.1",
+    "jsx-requirejs-plugin": "~0.5.2",
+    "marionette-vdom": "https://github.com/tiagorg/marionette-vdom.git#~0.1.0",
+    "ractive": "~0.6.1",
+    "ractive-adaptors-backbone": "~0.2.0",
+    "rv": "~0.1.8",
+    "backbone.mutators": "~0.4.4"
+  },
+  "resolutions": {
+    "underscore": ">=1.3.3 <=1.7.0",
+    "backbone": "1.0.0 - 1.1.2",
+    "backbone.babysitter": "^0.1.0",
+    "backbone.wreqr": "^1.0.0",
+    "backbone-relational": "49ab7ee3ef1b30a3ea476420aeea5c8242db650b"
+  }
+}
