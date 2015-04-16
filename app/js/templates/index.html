@@ -23,7 +23,7 @@
     }
   </style>
 
-  <div id="currentBatch" class="batch-{{id}}">
+  <div id="currentBatch" class="batch-{{id}} col-md-9">
     {{#pages}}
       <div class="page page-{{id}}">
         <div class="slots">
@@ -45,9 +45,7 @@
     {{/pages}}
   </div>
 
-  <div id="batchControls">
-    {{{batchControls}}}
-  </div>
+  <div class="col-md-3 noprint" id="batchControls" decorator="append:{{batchControls}}"></div>
   {{/batch}}
 </div>
 

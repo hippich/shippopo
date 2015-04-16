@@ -1,5 +1,6 @@
 define(function(require) {
     require('bbractive');
+    require('lib/decorators');
 
     var Ractive = require('ractive');
     var tpl = require('rv!templates/index');
@@ -14,18 +15,28 @@ define(function(require) {
             var form = new Form({ model: batch });
 
             var appView = window.appView = new Ractive({
-                adapt: ['Backbone'],
-                el: $('#main'),
-                template: tpl,
-                data: {
-                    batch: batch
+                adapt    : ['Backbone'],
+                el       : $('#main'),
+                template : tpl,
+                data     : {
+                    batch : batch
                 }
             });
 
-            setTimeout(function() {
-                form.render();
-                appView.set('batchControls', form.el);
-            }, 5000);
+            form.render();
+
+            batch.on('change', function() {
+                form.setValue(batch.attributes);
+            });
+
+            form.on('change', function() {
+                form.commit();
+            });
+
+            window.f = form;
+            window.b = batch;
+
+            appView.set('batchControls', form.el);
 
             return appView;
         }
